@@ -1,10 +1,10 @@
-loop :: Int -> Int -> IO()
-loop sumAcc count
-    |count == 0 = putStrLn $ show sumAcc
-    |otherwise = do
-        n <- readLn :: IO Int
-        loop (sumAcc + n) (count - 1)
+fibonacci num
+    |num == 0 = 0
+    |num == 1 = 0
+    |num == 2 = 1
+    |otherwise = ((fibonacci (num -1)) + (fibonacci (num -2)))
 
+main :: IO()
 main = do
     n <- readLn :: IO Int
-    loop 0 n
+    print(fibonacci n)

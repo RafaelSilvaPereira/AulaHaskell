@@ -1,3 +1,4 @@
+fibonacci :: Int -> Int
 fibonacci num
     |num == 0 = 0
     |num == 1 = 0
